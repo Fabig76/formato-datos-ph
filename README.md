@@ -88,7 +88,10 @@ repositorio, listo para servir como ejemplo punto por punto.
 ```
 formato-datos-ph/
 ├── README.md                          ← Este archivo
+├── index.html                         ← Landing page (se sirve en GitHub Pages)
+├── LICENSE                            ← MIT
 ├── docs/
+│   ├── guia-proyecto.md               ← 📌 LEER PRIMERO: contexto completo, IDs, problemas, decisiones
 │   ├── guia-implementacion.md         ← Paso a paso detallado
 │   ├── arquitectura.md                ← Decisiones técnicas
 │   ├── seguridad-y-privacidad.md      ← Ley 1581, manejo de datos sensibles
@@ -116,6 +119,11 @@ formato-datos-ph/
         └── docs/
             └── capturas-pantalla/
 ```
+
+> 💡 **Para retomar trabajo en este proyecto**, lee primero
+> [`docs/guia-proyecto.md`](docs/guia-proyecto.md) — contiene todos los
+> IDs, URLs, decisiones de diseño, problemas encontrados y soluciones.
+> Es la "memoria del proyecto" para futuras sesiones.
 
 ## Cómo implementar en tu propiedad horizontal
 
