@@ -47,8 +47,8 @@ a la siguiente sección. Si tienes campos personalizados, lee primero
 ### 1.3 Escribir los encabezados de las columnas
 
 Los encabezados van en la fila 1, de A1 en adelante. El número exacto
-depende de tu formato, pero para el formato estándar colombiano son **138
-columnas**.
+depende de tu formato, pero para el formato estándar colombiano con lookup
+de matrículas son **143 columnas**.
 
 **Opción A (más fácil):** Copia de la implementación de Cerro Azul.
 
@@ -179,7 +179,7 @@ Commit y push los cambios. La página se actualiza en 1 minuto.
      ```js
      const SHEET_ID = 'TU_SHEET_ID_AQUI';  // ← Pega aquí el ID de tu Sheet
      const SHEET_NAME = 'Registros';
-     const NUM_COLS = 138;  // ← Si tu formato tiene otras columnas, ajusta
+     const NUM_COLS = 143;  // ← v2: 138 base + 5 nuevas (K..Q parqueadero/matrícula)
      ```
   6. **PERSONALIZA LA AUTORIZACIÓN**: Busca el texto de la sección 11
      donde dice "Urbanización Cerro Azul (NIT 900770444)" y reemplázalo

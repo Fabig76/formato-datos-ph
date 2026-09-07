@@ -132,13 +132,14 @@ paso a paso completo (~30-45 minutos).
 
 Resumen ultra-corto:
 
-  1. Crear Google Sheet con 138 columnas (o el número que aplique a tu formato)
+  1. Crear Google Sheet con **143 columnas** (o el número que aplique a tu formato, incluyendo las 5 nuevas de parqueaderos/matrículas)
   2. Crear el repo GitHub Pages con la página web (copiar de Cerro Azul)
-  3. Crear el Apps Script (copiar de Cerro Azul, ajustar SHEET_ID)
-  4. Desplegar Apps Script como Web App
-  5. Pegar la URL del Web App en `js/app.js`
-  6. Generar el QR
-  7. Distribuir a los residentes
+  3. Crear el Apps Script (copiar de Cerro Azul, ajustar SHEET_ID, NUM_COLS=143)
+  4. (Opcional) Crear/llenar un Sheet de matrúsculas inmobiliarias para habilitar lookup automático
+  5. Desplegar Apps Script como Web App
+  6. Pegar la URL del Web App en `js/app.js`
+  7. Generar el QR
+  8. Distribuir a los residentes
 
 ## Personalización
 
@@ -182,4 +183,5 @@ MIT. Úsalo libremente en cualquier propiedad horizontal.
   · Diseñado e implementado por Hermes Agent para Fabio Lesmes / Urbanización Cerro Azul
   · Basado en el formato oficial colombiano de manejo de datos de residentes
     en propiedad horizontal (Ley 1581 de 2012 + Decreto 768 de 2025)
-  · Implementación inicial: Septiembre 2026
+  · **Implementación inicial**: Septiembre 2026
+  · **Actualización v2 (7-Sep-2026)**: lookup automático de matrículas inmobiliarias, 138→143 columnas
