@@ -114,32 +114,39 @@ Limitaciones:
 
 ## Estructura del Sheet
 
-### Hoja "Registros" (138 columnas, A1:EH1)
+### Hoja "Registros" (143 columnas, A1:EM1)
+
+Esquema v2 (post 7-Sep-2026): 5 columnas nuevas en K..Q para separar
+N° de parqueadero de N° de apto y habilitar el lookup automático de
+matrículas contra la hoja `matriculas-cerro-azul`.
 
 Los nombres de las columnas siguen una convención:
 
-  · `N° Formulario` (A) — ID único del registro
-  · `Fecha Registro` (B) — ISO datetime de creación
+  · `N° Formulario` (A) — ID único del registro (formato CA-XXXX)
+  · `Fecha Registro` (B) — ISO datetime de creación, inmutable
   · `Fecha Última Edición` (C) — ISO datetime de la última modificación
   · `N° Apto` (D) — **Llave de dedupe** (un apartamento = un registro)
   · `Diligencia como` (E) — Propietario / Arrendatario / Tenedor
   · `Nombre/CC/Correo/Celular Propietario` (F-J) — titular
-  · `Parqueaderos / Matrículas` (K-L)
-  · Datos del arrendatario (M-P)
-  · Parqueadero autorizado a tercero (Q-S)
-  · Inmobiliaria/representante (T-X)
-  · Residentes (Y-AN, 4 personas × 5 campos)
-  · Menores (AO-AT, 4 personas × 3 campos)
-  · Vehículos (AU-BF, 2 vehículos × 6 campos)
-  · Motas (BG-BR, 2 motos × 6 campos)
-  · Bicicletas (BS-CB, 2 bicis × 4 campos)
-  · Llaveros/tags autorizados (CC-CD)
-  · Dispositivos (CE-DO, 3 dispositivos × 5 campos)
-  · Mascotas (DP-FI, 2 mascotas × 10 campos)
-  · Emergencias (FJ-FO, 2 contactos × 3 campos)
-  · Autorizaciones (FP-FR)
-  · Firma (FS-FU)
-  · Hash Dedupe (FV) — sha256[:16] de apto+cc+firma
+  · `Parqueaderos y Matrículas` (K-Q, 7 cols) — N° Parq 1, Mat Parq 1,
+    N° Parq 2, Mat Parq 2, Mat Apto, Requiere Revisión (Sí/No),
+    Observaciones [v2 nuevos]
+  · `Encargado o administrador` (R-U, 4 cols) — sección 2 del formulario
+    (header Sheet aún dice 'Arrendatario' por compatibilidad histórica)
+  · `Parqueadero autorizado a tercero` (V-X, 3 cols)
+  · `Inmobiliaria / representante` (Y-AC, 5 cols)
+  · `Residentes` (AD-AW, 4 personas × 5 campos = 20)
+  · `Menores` (AX-BI, 4 × 3 = 12)
+  · `Vehículos` (BJ-BU, 2 × 6 = 12)
+  · `Motos` (BV-CG, 2 × 6 = 12)
+  · `Bicicletas` (CH-CO, 2 × 4 = 8)
+  · `Llaveros/tags autorizados` (CP-CQ, 2 cols)
+  · `Dispositivos` (CR-DF, 3 × 5 = 15)
+  · `Mascotas` (DG-DZ, 2 × 10 = 20)
+  · `Emergencias` (EA-EF, 2 × 3 = 6)
+  · `Autorizaciones` (EG-EI, 3 booleanos Sí/No)
+  · `Firma` (EJ-EL, 3 cols: nombre, CC, fecha)
+  · `Hash Dedupe` (EM) — sha256[:16] de apto + cc_titular + cc_firma
 
 ### Hoja "Maestros"
 
